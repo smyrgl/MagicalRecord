@@ -22,7 +22,7 @@
 #define MR_LOGGING_CONTEXT 0
 #endif
 
-#if __has_include("CocoaLumberjack.h")
+#if defined(COCOAPODS_POD_AVAILABLE_CocoaLumberjack)
     #define MR_LOG_LEVEL_DEF (DDLogLevel)[MagicalRecord loggingLevel]
     #define CAST (DDLogFlag)
     #import <CocoaLumberjack/CocoaLumberjack.h>
