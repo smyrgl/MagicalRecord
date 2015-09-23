@@ -18,8 +18,11 @@
  @param coordinator Persistent Store Coordinator
  */
 + (void) MR_initializeDefaultContextWithCoordinator:(NSPersistentStoreCoordinator *)coordinator;
++ (void)MR_setRootSavingContext:(NSManagedObjectContext *)context;
 
 #pragma mark - Default Contexts
++ (void) MR_setDefaultContext:(NSManagedObjectContext *)moc;
+
 /**
  Root context responsible for sending changes to the main persistent store coordinator that will be saved to disk.
 
